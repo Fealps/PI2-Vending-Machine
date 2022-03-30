@@ -1,4 +1,9 @@
 # Environments
 /env
+/venv
 # mkdocs documentation
 /docs/site
+# files
+db.sqlite3
+*/__pycache__
+*/migrations
