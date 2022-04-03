@@ -13,5 +13,11 @@ Repositório para os artefatos de software do grupo 6 na disciplina Projeto Inte
 ´$ source env/projeto_pi2/bin/activate´
 ## Instalar Dependências
 ´$sudo python3 -m pip install -r requirements.txt ´
+## Criar migrações 
+´$python manage.py makemigrations ´
+## Fazer migrações 
+´$python manage.py migrate ´
+## Subir aplicação 
+´$python manage.py runserver ´
 ## Desativar o Ambiente virtual 
 ´$ deactivate´

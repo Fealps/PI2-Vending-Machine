@@ -2,3 +2,7 @@
 /env
 # mkdocs documentation
 /docs/site
+*.pyc
+*.pyo
+__pycache__/
+.cache
