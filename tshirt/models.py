@@ -15,8 +15,8 @@ class Tshirt(models.Model):
   color = models.CharField(max_length=30, blank=False)
   price = models.FloatField(blank=False, default=0.00)
   qtyInStock = models.IntegerField(default=1)
-  photo = models.ImageField(upload_to='statics/tshirts/', blank=True)
-  size = models.ForeignKey(Size, on_delete=models.CASCADE)
+  photo = models.ImageField(upload_to='statics/tshirts/', null=True)
+  size = models.ForeignKey(Size, null=True, on_delete=models.CASCADE)
 
   class Gender(models.IntegerChoices):
     MALE = 0
