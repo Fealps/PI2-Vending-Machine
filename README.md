@@ -13,6 +13,7 @@ Repositório para os artefatos de software do grupo 6 na disciplina Projeto Inte
 ´$ source env/projeto_pi2/bin/activate´
 ## Instalar Dependências
 ´$sudo python3 -m pip install -r requirements.txt ´
+´$sudo apt install postgresql´
 ## Criar migrações 
 ´$python manage.py makemigrations ´
 ## Fazer migrações 
