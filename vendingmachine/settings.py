@@ -12,9 +12,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv()
 
 # Quick-start development settings - unsuitable for production
@@ -54,10 +56,17 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'vendingmachine.urls'
 
+BASE_STATIC = Path(__file__).resolve().parent.parent
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_STATIC, 'static/')
+
+IMG_URL = "tshirt/static/img/tshirts/"
+IMG_ROOT = os.path.join(BASE_STATIC, 'tshirt/static/img/tshirts/')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +78,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'vendingmachine.wsgi.application'
 

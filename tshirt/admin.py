@@ -1,3 +1,7 @@
 from django.contrib import admin
+from tshirt.models import Tshirt, Size
 
-# Register your models here.
+
+admin.site.register(Tshirt)
+admin.site.register(Size)
+
