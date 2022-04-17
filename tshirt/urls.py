@@ -3,5 +3,5 @@ from tshirt import views
 
 
 urlpatterns = [
-  path('', views.index, name='index'),
+  path('tshirt/<int:page>', views.index, name='tshirts')
 ]

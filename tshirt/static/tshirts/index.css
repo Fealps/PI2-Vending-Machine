@@ -19,12 +19,13 @@
 
 .container {
   max-width: 100%;
-  margin-left: -1rem;
-  padding: 3rem;
+  margin-left: -2rem;
+  padding: 1rem 6rem;
+  padding-right: 13rem;
 }
 
 .product-item {
-  width: 16rem;
+  width: 20rem;
 }
 
 .product-price span{
