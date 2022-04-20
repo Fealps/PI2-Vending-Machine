@@ -7,3 +7,4 @@ psycopg2
 Pillow
 python-dotenv
 djangorestframework==3.13.1
+jinja2
