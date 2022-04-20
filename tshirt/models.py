@@ -1,7 +1,5 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-from django.utils import timezone
-from django.conf import settings
 
 
 class Size(models.Model):
