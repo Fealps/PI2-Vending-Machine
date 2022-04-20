@@ -1,4 +1,5 @@
 from django.contrib import admin
-from tshirt.models import Sale
+from sale.models import Sale, PaymentFactory
 
+admin.site.register(PaymentFactory)
 admin.site.register(Sale)
