@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tshirt',
     'rest_framework',
-    'sale'
+    'payment',
+    'sale'    
 ]
 
 MIDDLEWARE = [
@@ -95,6 +96,7 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
         'HOST': '127.0.0.1',
         'PORT': '5432',
+        'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }
 

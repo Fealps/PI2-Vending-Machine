@@ -1,5 +1,4 @@
 from django.contrib import admin
-from sale.models import Sale, PaymentFactory
+from sale.models import Sale
 
-admin.site.register(PaymentFactory)
 admin.site.register(Sale)
