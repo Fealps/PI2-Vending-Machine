@@ -1,0 +1,8 @@
+asgiref==3.5.0
+Django==4.0.3
+sqlparse==0.4.2
+psycopg2
+Pillow
+python-dotenv
+djangorestframework==3.13.1
+jinja2
