@@ -2,22 +2,14 @@
 
 Repositório para os artefatos de software do grupo 6 na disciplina Projeto Integrador 2 - 2021.2
 
+## Clonar repositório
+´$ git clone git@github.com:Fealps/PI2-Vending-Machine.git && cd PI2-Vending-Machine´
 
-## Criação de Ambiente virtual
-´$ sudo apt install python3.8-venv´
-    ou 
-´$ pip install virtualenv´
+## Criar aplição
+´$ docker-compose up --build ´
 
-´$ sudo python3 -m venv env/projeto_pi2 ´
-## Ativar o Ambiente Virtual
-´$ source env/projeto_pi2/bin/activate´
-## Instalar Dependências
-´$sudo python3 -m pip install -r requirements.txt ´
-## Criar migrações 
-´$python manage.py makemigrations ´
-## Fazer migrações 
-´$python manage.py migrate ´
 ## Subir aplicação 
-´$python manage.py runserver ´
-## Desativar o Ambiente virtual 
-´$ deactivate´
+´$ docker-compose up´
+
+## Acessar aplicação
+ No navegador digite ´http://www.localhost.com:8000/´
