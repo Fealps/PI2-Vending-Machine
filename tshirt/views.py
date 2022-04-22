@@ -11,3 +11,7 @@ def index(request, page=1):
   context = {"tshirts": tshirt.object_list, "page_obj": tshirt}
   
   return render(request, 'index.jinja2', context)
+
+def selectedTshirt(request):
+
+  return render(request, 'selected-tshirt.jinja2')
