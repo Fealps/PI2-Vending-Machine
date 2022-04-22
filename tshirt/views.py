@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 def index(request, page=1):
   tshirts = Tshirt.objects.all()
 
-  paginator = Paginator(tshirts, per_page=6)
+  paginator = Paginator(tshirts, per_page=9)
   tshirt = paginator.get_page(page)
   context = {"tshirts": tshirt.object_list, "page_obj": tshirt}
   
