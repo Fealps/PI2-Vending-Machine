@@ -2,6 +2,8 @@ version: "3"
 services:
   db:
     image: postgres
+    env_file:
+      - .env
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: dbpostgresql
