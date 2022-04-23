@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure--zf(%z4e#s75z46@ps%+)2slry*sb665p9v5^pkuea_52e!_i9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,9 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tshirt',
-    'rest_framework',
-    'payment',
-    'sale'    
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -93,10 +91,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dbpostgresql',
         'USER': 'postgres',
-        'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
-        'HOST': '127.0.0.1',
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': 'db',
         'PORT': '5432',
-        'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }
 
