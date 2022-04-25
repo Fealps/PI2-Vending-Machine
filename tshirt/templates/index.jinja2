@@ -36,7 +36,7 @@
 
           <div class="row col col-lg-12 product-pagination" style="display:flex; justify-content:space-between">
             {%if page_obj.has_previous%}
-                <a href="/tshirt/{{page_obj.previous_page_number}}">
+                <a href="/tshirt/{{page_obj.previous}}">
                   <i class=" col-2 fa fa-thin fa-arrow-left" style="color: #42C5BD; font-size:60px;">
                   </i>
                 </a>
@@ -51,7 +51,7 @@
                 {% endfor %}
             </div>
               {%if page_obj.has_next%}
-                <a href="/tshirt/{{page_obj.next_page_number}}">
+                <a href="/tshirt/{{page_obj.next}}">
                   <i class="col-2 fa fa-thin fa-arrow-right" style="color: #42C5BD; text-align:center; font-size:60px;">
                   </i>
                 </a>
