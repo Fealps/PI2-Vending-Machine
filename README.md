@@ -23,4 +23,4 @@ Substitua suasenha por uma senha que ache apropriada e salve o arquivo.
 `docker-compose up`
 
 ## Acessar aplicação
- No navegador digite `http://www.localhost.com:8000/`
+ No navegador digite `http://localhost:8000/`
