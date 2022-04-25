@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{% static 'tshirts/index.css' %}">
+  <script src="https://kit.fontawesome.com/f9680fb690.js" crossorigin="anonymous"></script>
   </head>
 <body>
   <section class="list-tshirts">
@@ -11,7 +12,7 @@
         <div class="col-lg-8">
           <div class="row">
           {% for tshirt in tshirts %}
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="card-div col-lg-4 col-md-4 col-sm-4">
               <div class="product-item">
               <div class="card">
                 <img class="card-img-top" src="{{ tshirt.photo_url|default_if_none:'#'}}" alt="Card image cap">
@@ -32,22 +33,33 @@
             </div>
           {% endfor%}
           </div>
-          <div class="row justify-content-md-center">
-            <div class="col col-lg-12">
-              <div class="product-pagination">
-              <a href="#" style="color: #42C5BD;">&laquo;</a>
-              {% for page_number in page_obj.paginator.page_range %}
-                <a
-                  href="{% url 'tshirts' page_number %}"
-                  class="{% if page_number == page_obj.number %}current{% endif %}"
-                >
-                  ■
+
+          <div class="row col col-lg-12 product-pagination" style="display:flex; justify-content:space-between">
+            {%if page_obj.has_previous%}
+                <a href="/tshirt/{{page_obj.previous_page_number}}">
+                  <i class=" col-2 fa fa-thin fa-arrow-left" style="color: #42C5BD; font-size:60px;">
+                  </i>
                 </a>
-              {% endfor %}
-              <a href="#" style="color: #42C5BD;">&raquo;</a>
-              </div>
+              {% else %}
+                <div class="col-2"></div>
+            {%endif%}
+            <div style="justify-content:center; font-size:25px; text-align:center;">
+                {% for page_number in page_obj.paginator.page_range %}
+                  <a href="{% url 'tshirts' page_number %}">
+                    <div class="pageMarker {% if page_number == page_obj.number %}pageCurrent{% endif %}"> </div>
+                  </a>
+                {% endfor %}
             </div>
+              {%if page_obj.has_next%}
+                <a href="/tshirt/{{page_obj.next_page_number}}">
+                  <i class="col-2 fa fa-thin fa-arrow-right" style="color: #42C5BD; text-align:center; font-size:60px;">
+                  </i>
+                </a>
+              {% else %}
+                <div class="col-2"></div>
+              {%endif%}
           </div>
+
         </div>
       </div>
     </div>
