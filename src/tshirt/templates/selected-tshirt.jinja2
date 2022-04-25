@@ -26,30 +26,32 @@
             <label for="option-xg" class="bar-item bar-label">XG</label>
 
             <h1 class="font-weight-bold wc" style="margin-top: 370px">
-                Preço #####
+                Preço: R$ {{ tshirt.price }}
             </h1>
             <button class=" btn btn-buy bg-action" style="margin-top: 80px"> 
                 <h1  href="#" class="font-weight-bold wc" >Comprar</h1>
             </button>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="col-3"> 
-                <button class=" btn btn-return"> 
-                    <i class="fa fa-arrow-left action fa-xxg" aria-hidden="true"></i>
-                </button>
+            <div class="col-3">
+                <a href="{% url 'tshirt' %}"> 
+                    <button class=" btn btn-return"> 
+                        <i class="fa fa-arrow-left action fa-xxg" aria-hidden="true"></i>
+                    </button>
+                </a>
             </div>
             <div class="col-2"> 
                 <h2 class="font-weight-bold db">
-                    NomedaCamisa
+                    {{ tshirt.name }}
                 </h2>
             </div>
             <div class="col-7"></div>
         </nav>
         <div class="image-full">
-            <img src="{% static 'img/tshirts/product-2.jpg' %}"/>
+            <img src="{{ tshirt.photo_url|default_if_none:'#' }}"/>
         </div>
         <div class="image-icon">
-            <img src="{% static 'img/tshirts/product-2.jpg' %}"/>
+            <img src="{{ tshirt.photo_url|default_if_none:'#' }}"/>
         </div>
     </body>
 </html>

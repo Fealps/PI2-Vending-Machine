@@ -16,21 +16,23 @@
           {% for tshirt in tshirts %}
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="product-item">
-              <div class="card">
-                <img class="card-img-top" src="{{ tshirt.photo_url|default_if_none:'#'}}" alt="Card image cap">
-                <div class="product-info">
-                  <div class="product-name">
-                    <span>
-                      {{ tshirt.name }}
-                    </span>
-                  </div>
-                  <div class="product-price">
-                    <span>
-                      R$ {{ tshirt.price }}
-                    </span>
+              <a href="{% url 'selectedTshirt' tshirt.id %}">
+                <div class="card">
+                  <img class="card-img-top" src="{{ tshirt.photo_url|default_if_none:'#'}}" alt="Card image cap">
+                  <div class="product-info">
+                    <div class="product-name">
+                      <span>
+                        {{ tshirt.name }}
+                      </span>
+                    </div>
+                    <div class="product-price">
+                      <span>
+                        R$ {{ tshirt.price }}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
               </div>
             </div>
           {% endfor%}
