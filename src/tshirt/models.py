@@ -16,6 +16,7 @@ class Tshirt(models.Model):
   price = models.FloatField(blank=False, default=0.00)
   qtyInStock = models.IntegerField(default=1)
   photo = models.ImageField(upload_to='tshirt/static/img/tshirts/', null=True)
+  position = ArrayField(models.IntegerField(default=0), size=2, null=True)
   size = models.ForeignKey(Size, null=True, on_delete=models.CASCADE)
 
   class Gender(models.IntegerChoices):
