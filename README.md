@@ -12,7 +12,7 @@ Repositório para os artefatos de software do grupo 6 na disciplina Projeto Inte
 
 Na raiz do projeto onde se encontra os arquivos de Docker crie um arquivo chamado `.env`. Dentro desse arquivo escreva:
 
-`export POSTGRES_PASSWORD=suasenha`
+`export POSTGRES_PASSWORD= 'suasenha' `
 
 Substitua suasenha por uma senha que ache apropriada e salve o arquivo.
 
