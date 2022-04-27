@@ -12,7 +12,8 @@ def index(request, page=1):
   
   return render(request, 'index.jinja2', context)
 
-def selectedTshirt(request):
+def selectedTshirt(request, id):
+  tshirt = Tshirt.objects.get(id=id)
 
   tshirts = list(Tshirt.objects.filter(name=tshirt.name).order_by('size'))
   
