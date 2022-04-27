@@ -21,7 +21,7 @@ services:
       POSTGRES_DB: dbpostgresql
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - ./:/vendingmachine/src
+      - ./:/vendingmachine/
     command: python manage.py runserver 0.0.0.0:8000
     depends_on:
       - db
