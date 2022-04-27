@@ -11,19 +11,18 @@
             <h3 class=" font-weight-bold wc" style="padding-top: 80%"> Escolha o tamanho:</h3>
 
 
-            
             <input type="radio" name="size-select" id="option-xp" value="xp" disabled>
-            <input type="radio" name="size-select" id="option-p" value="p">
-            <input type="radio" name="size-select" id="option-m" value="m">
-            <input type="radio" name="size-select" id="option-g" value="g">
-            <input type="radio" name="size-select" id="option-xg" value="xg">
+            <input type="radio" name="size-select" id="option-p" value="p" disabled>
+            <input onclick="window.location='{% url 'selectedTshirt' tshirts.1.id %}';" type="radio" name="size-select" id="option-m" value="m">
+            <input onclick="window.location='{% url 'selectedTshirt' tshirts.0.id %}';" type="radio" name="size-select" id="option-g" value="g">
+            <input type="radio" name="size-select" id="option-xg" value="xg" disabled>
             
             
             <label for="option-xp" class="bar-item bar-label" style="margin-top: -470!important" disabled>XP </label>
             <label for="option-p"  class="bar-item bar-label">P </label>
             <label for="option-m"  class="bar-item bar-label">M </label>
-            <label for="option-g"  class="bar-item bar-label">G </label>
-            <label for="option-xg" class="bar-item bar-label">XG</label>
+            <label for="option-g"  class="bar-item bar-label" disabled>G </label>
+            <label for="option-xg" class="bar-item bar-label" disabled>XG</label>
 
             <h1 class="font-weight-bold wc" style="margin-top: 370px">
                 Preço #####
