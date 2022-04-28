@@ -27,9 +27,11 @@
             <h1 class="font-weight-bold wc" style="margin-top: 370px">
                 Preço: R$ {{ tshirt.price }}
             </h1>
+            <a href="{% url 'payments:payment' id=tshirt.id %}">
             <button class=" btn btn-buy bg-action" style="margin-top: 80px"> 
-                <h1  href="#" class="font-weight-bold wc" >Comprar</h1>
+                <h1 class="font-weight-bold wc" >Comprar</h1>
             </button>
+            </a>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="col-3">

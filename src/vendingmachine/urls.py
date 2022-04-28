@@ -8,7 +8,8 @@ from tshirt.api import TshirtApiView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', TshirtApiView.as_view()),
-    path('', include('tshirt.urls'))
+    path('', include('tshirt.urls')),
+    path('', include('payment.urls', namespace='payments'))
 ]
 
 if settings.DEBUG:
