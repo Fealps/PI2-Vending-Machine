@@ -3,10 +3,30 @@
   <head>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="{% static 'tshirts/selected.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'tshirts/pix-payment.css' %}">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
-    <img src="{% static path %}">
+    <div class="return">
+      <a href="{% url 'selectedTshirt' tshirt.id %}"> 
+        <button class=" btn btn-return"> 
+          <i class="fa fa-arrow-left action fa-xxg" aria-hidden="true"></i>
+        </button>
+      </a>
+    </div>
+    <div class="pix-qrcode">
+      <img src="{% static path %}">
+      <h2 class="info">ESCANEIE O QRCODE ACIMA</h2>
+    </div>
+    <div class="sale-details">
+      <span>Resumo da compra:</span>
+      <span class="tshirt-name">{{tshirt.name}}</span>
+      <span class="tshirt-price">R$ {{tshirt.price}}0</span>
+    </div>
+    <div class="cancel">
+      <a href="{% url 'tshirt' %}"> 
+        <button class="btn btn-info">CANCELAR</button>
+      </a>
+    </div>
   </body>
 </html>
